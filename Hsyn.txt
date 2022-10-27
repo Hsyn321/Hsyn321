@@ -1,840 +1,530 @@
+-- GUI to Lua 
+-- Version: 0.0.3
+
 -- Instances:
 
 local HsynGUI = Instance.new("ScreenGui")
-local Gui = Instance.new("Frame")
-local GuiName = Instance.new("TextLabel")
-local Close = Instance.new("TextButton")
-local UICorner = Instance.new("UICorner")
-local Info = Instance.new("TextLabel")
-local SelectPlayer = Instance.new("TextButton")
-local Player = Instance.new("Frame")
-local SpeedHack = Instance.new("TextButton")
-local JumpPower = Instance.new("TextButton")
-local Anchor = Instance.new("TextButton")
-local UnAnchor = Instance.new("TextButton")
-local nvisible = Instance.new("TextButton")
-local infjp = Instance.new("TextButton")
-local TextLabel = Instance.new("TextLabel")
-local Btools = Instance.new("TextButton")
-local Night = Instance.new("TextButton")
+local Gui_1 = Instance.new("Frame")
+local GuiName_1 = Instance.new("TextLabel")
+local Close_1 = Instance.new("TextButton")
+local UICorner_1 = Instance.new("UICorner")
+local UIStroke_1 = Instance.new("UIStroke")
+local UIStroke_2 = Instance.new("UIStroke")
+local Info_1 = Instance.new("TextLabel")
+local SelectPlayer_1 = Instance.new("TextButton")
+local Player_1 = Instance.new("Frame")
+local SpeedHack_1 = Instance.new("TextButton")
+local JumpPower_1 = Instance.new("TextButton")
+local Anchor_1 = Instance.new("TextButton")
+local UnAnchor_1 = Instance.new("TextButton")
+local Invisible_1 = Instance.new("TextButton")
+local infjp_1 = Instance.new("TextButton")
+local TextLabel_1 = Instance.new("TextLabel")
+local Btools_1 = Instance.new("TextButton")
+local Night_1 = Instance.new("TextButton")
 local TextLabel_2 = Instance.new("TextLabel")
-local NoFog = Instance.new("TextButton")
+local NoFog_1 = Instance.new("TextButton")
 local TextLabel_3 = Instance.new("TextLabel")
-local morning = Instance.new("TextButton")
+local morning_1 = Instance.new("TextButton")
 local TextLabel_4 = Instance.new("TextLabel")
-local SpeedFrame = Instance.new("Frame")
-local Amount = Instance.new("TextBox")
+local SpeedFrame_1 = Instance.new("Frame")
+local Amount_1 = Instance.new("TextBox")
 local UICorner_2 = Instance.new("UICorner")
-local Set = Instance.new("TextButton")
+local Set_1 = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
-local Reset = Instance.new("TextButton")
+local Reset_1 = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
-local SelectMain = Instance.new("TextButton")
-local Main = Instance.new("Frame")
+local SelectMain_1 = Instance.new("TextButton")
+local Main_1 = Instance.new("Frame")
 local TextLabel_5 = Instance.new("TextLabel")
 local TextLabel_6 = Instance.new("TextLabel")
-local JumpFrame = Instance.new("Frame")
+local JumpFrame_1 = Instance.new("Frame")
 local Amount_2 = Instance.new("TextBox")
 local UICorner_5 = Instance.new("UICorner")
 local JumpPower_2 = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
-local ResetPower = Instance.new("TextButton")
+local ResetPower_1 = Instance.new("TextButton")
 local UICorner_7 = Instance.new("UICorner")
 local UICorner_8 = Instance.new("UICorner")
-local Visuals = Instance.new("TextButton")
-local Visual = Instance.new("Frame")
-local Esp = Instance.new("TextButton")
-local OpenFrame = Instance.new("Frame")
-local Open = Instance.new("TextButton")
+local Visuals_1 = Instance.new("TextButton")
+local Visual_1 = Instance.new("Frame")
+local Esp_1 = Instance.new("TextButton")
+local OpenFrame_1 = Instance.new("Frame")
+local Open_1 = Instance.new("TextButton")
+local UIStroke_3 = Instance.new("UIStroke")
 
---Properties:
-
+-- Properties:
 HsynGUI.Name = "HsynGUI"
 HsynGUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-HsynGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-Gui.Name = "Gui"
-Gui.Parent = HsynGUI
-Gui.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Gui.BackgroundTransparency = 0.400
-Gui.Position = UDim2.new(0.233597681, 0, 0.271604955, 0)
-Gui.Size = UDim2.new(0, 724, 0, 421)
+Gui_1.Name = "Gui"
+Gui_1.Parent = HsynGUI
+Gui_1.BackgroundColor3 = Color3.fromRGB(0,0,0)
+Gui_1.BackgroundTransparency = 0.4000000059604645
+Gui_1.BorderColor3 = Color3.fromRGB(27,42,53)
+Gui_1.Position = UDim2.new(0.233597681, 0,0.271604955, 0)
+Gui_1.Size = UDim2.new(0, 724,0, 421)
 
-GuiName.Name = "GuiName"
-GuiName.Parent = Gui
-GuiName.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-GuiName.Size = UDim2.new(0, 724, 0, 50)
-GuiName.Font = Enum.Font.DenkOne
-GuiName.Text = "Hsyn Gui"
-GuiName.TextColor3 = Color3.fromRGB(0, 0, 0)
-GuiName.TextScaled = true
-GuiName.TextSize = 14.000
-GuiName.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-GuiName.TextStrokeTransparency = 0.000
-GuiName.TextWrapped = true
+GuiName_1.Name = "GuiName"
+GuiName_1.Parent = Gui_1
+GuiName_1.BackgroundColor3 = Color3.fromRGB(0,0,0)
+GuiName_1.BorderColor3 = Color3.fromRGB(27,42,53)
+GuiName_1.Size = UDim2.new(0, 724,0, 50)
+GuiName_1.Font = Enum.Font.DenkOne
+GuiName_1.Text = "Hsyn Gui"
+GuiName_1.TextScaled = true
+GuiName_1.TextSize = 14
+GuiName_1.TextStrokeColor3 = Color3.fromRGB(255,255,255)
+GuiName_1.TextStrokeTransparency = 0
+GuiName_1.TextWrapped = true
 
-Close.Name = "Close"
-Close.Parent = GuiName
-Close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-Close.Position = UDim2.new(1.03038681, 0, 0.879999995, 0)
-Close.Size = UDim2.new(0, 63, 0, 56)
-Close.Font = Enum.Font.SourceSans
-Close.Text = "X"
-Close.TextColor3 = Color3.fromRGB(255, 255, 255)
-Close.TextScaled = true
-Close.TextSize = 14.000
-Close.TextWrapped = true
+Close_1.Name = "Close"
+Close_1.Parent = GuiName_1
+Close_1.Active = true
+Close_1.BackgroundColor3 = Color3.fromRGB(255,0,0)
+Close_1.BorderColor3 = Color3.fromRGB(27,42,53)
+Close_1.Position = UDim2.new(1.03038681, 0,0.879999995, 0)
+Close_1.Size = UDim2.new(0, 63,0, 56)
+Close_1.Text = "X"
+Close_1.TextColor3 = Color3.fromRGB(255,255,255)
+Close_1.TextScaled = true
+Close_1.TextSize = 14
+Close_1.TextWrapped = true
 
-UICorner.Parent = Close
+UICorner_1.Parent = Close_1
 
-Info.Name = "Info"
-Info.Parent = Gui
-Info.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Info.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Info.Position = UDim2.new(0.0220994484, 0, -0.0593824238, 0)
-Info.Size = UDim2.new(0, 163, 0, 25)
-Info.Font = Enum.Font.Fantasy
-Info.Text = "By Kertenkele_664"
-Info.TextColor3 = Color3.fromRGB(255, 255, 255)
-Info.TextSize = 14.000
-Info.TextWrapped = true
+UIStroke_1.Parent = Close_1
+UIStroke_1.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+UIStroke_1.Thickness = 5.699999809265137
 
-SelectPlayer.Name = "SelectPlayer"
-SelectPlayer.Parent = Gui
-SelectPlayer.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-SelectPlayer.Position = UDim2.new(0, 0, 0.237529695, 0)
-SelectPlayer.Size = UDim2.new(0, 134, 0, 50)
-SelectPlayer.Font = Enum.Font.FredokaOne
-SelectPlayer.Text = "Player"
-SelectPlayer.TextColor3 = Color3.fromRGB(0, 0, 0)
-SelectPlayer.TextScaled = true
-SelectPlayer.TextSize = 14.000
-SelectPlayer.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-SelectPlayer.TextStrokeTransparency = 0.000
-SelectPlayer.TextWrapped = true
+UIStroke_2.Parent = Gui_1
+UIStroke_2.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+UIStroke_2.Thickness = 11.100000381469727
 
-Player.Name = "Player"
-Player.Parent = Gui
-Player.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Player.BackgroundTransparency = 0.300
-Player.Position = UDim2.new(0.185082883, 0, 0.118764848, 0)
-Player.Size = UDim2.new(0, 590, 0, 371)
+Info_1.Name = "Info"
+Info_1.Parent = Gui_1
+Info_1.BackgroundColor3 = Color3.fromRGB(0,0,0)
+Info_1.BorderColor3 = Color3.fromRGB(0,0,0)
+Info_1.Position = UDim2.new(0.0220994484, 0,-0.0593824238, 0)
+Info_1.Size = UDim2.new(0, 163,0, 25)
+Info_1.Font = Enum.Font.Fantasy
+Info_1.Text = "By Kertenkele_664"
+Info_1.TextColor3 = Color3.fromRGB(255,255,255)
+Info_1.TextSize = 14
+Info_1.TextWrapped = true
 
-SpeedHack.Name = "SpeedHack"
-SpeedHack.Parent = Player
-SpeedHack.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
-SpeedHack.Position = UDim2.new(0.0262103584, 0, 0.0189767517, 0)
-SpeedHack.Size = UDim2.new(0, 86, 0, 77)
-SpeedHack.Font = Enum.Font.Arial
-SpeedHack.Text = "Speed"
-SpeedHack.TextColor3 = Color3.fromRGB(0, 0, 0)
-SpeedHack.TextScaled = true
-SpeedHack.TextSize = 14.000
-SpeedHack.TextWrapped = true
+SelectPlayer_1.Name = "SelectPlayer"
+SelectPlayer_1.Parent = Gui_1
+SelectPlayer_1.Active = true
+SelectPlayer_1.BackgroundColor3 = Color3.fromRGB(0,0,0)
+SelectPlayer_1.BorderColor3 = Color3.fromRGB(27,42,53)
+SelectPlayer_1.Position = UDim2.new(0, 0,0.237529695, 0)
+SelectPlayer_1.Size = UDim2.new(0, 134,0, 50)
+SelectPlayer_1.Font = Enum.Font.FredokaOne
+SelectPlayer_1.Text = "Player"
+SelectPlayer_1.TextScaled = true
+SelectPlayer_1.TextSize = 14
+SelectPlayer_1.TextStrokeColor3 = Color3.fromRGB(255,255,255)
+SelectPlayer_1.TextStrokeTransparency = 0
+SelectPlayer_1.TextWrapped = true
 
-JumpPower.Name = "JumpPower"
-JumpPower.Parent = Player
-JumpPower.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
-JumpPower.Position = UDim2.new(0.227905259, 0, 0.0189767517, 0)
-JumpPower.Size = UDim2.new(0, 86, 0, 77)
-JumpPower.Font = Enum.Font.Arial
-JumpPower.Text = "JumpPower"
-JumpPower.TextColor3 = Color3.fromRGB(0, 0, 0)
-JumpPower.TextScaled = true
-JumpPower.TextSize = 14.000
-JumpPower.TextWrapped = true
+Player_1.Name = "Player"
+Player_1.Parent = Gui_1
+Player_1.BackgroundColor3 = Color3.fromRGB(0,0,0)
+Player_1.BackgroundTransparency = 0.30000001192092896
+Player_1.BorderColor3 = Color3.fromRGB(27,42,53)
+Player_1.Position = UDim2.new(0.185082883, 0,0.118764848, 0)
+Player_1.Size = UDim2.new(0, 590,0, 371)
 
-Anchor.Name = "Anchor"
-Anchor.Parent = Player
-Anchor.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
-Anchor.Position = UDim2.new(0.426210314, 0, 0.0189767517, 0)
-Anchor.Size = UDim2.new(0, 86, 0, 77)
-Anchor.Font = Enum.Font.Arial
-Anchor.Text = "Anchor Player"
-Anchor.TextColor3 = Color3.fromRGB(0, 0, 0)
-Anchor.TextScaled = true
-Anchor.TextSize = 14.000
-Anchor.TextWrapped = true
+SpeedHack_1.Name = "SpeedHack"
+SpeedHack_1.Parent = Player_1
+SpeedHack_1.Active = true
+SpeedHack_1.BackgroundColor3 = Color3.fromRGB(90,90,90)
+SpeedHack_1.BorderColor3 = Color3.fromRGB(27,42,53)
+SpeedHack_1.Position = UDim2.new(0.0262103584, 0,0.0189767517, 0)
+SpeedHack_1.Size = UDim2.new(0, 86,0, 77)
+SpeedHack_1.Font = Enum.Font.Arial
+SpeedHack_1.Text = "Speed"
+SpeedHack_1.TextScaled = true
+SpeedHack_1.TextSize = 14
+SpeedHack_1.TextWrapped = true
 
-UnAnchor.Name = "UnAnchor"
-UnAnchor.Parent = Player
-UnAnchor.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
-UnAnchor.Position = UDim2.new(0.63468492, 0, 0.018976748, 0)
-UnAnchor.Size = UDim2.new(0, 86, 0, 77)
-UnAnchor.Font = Enum.Font.Arial
-UnAnchor.Text = "UnAnchor"
-UnAnchor.TextColor3 = Color3.fromRGB(0, 0, 0)
-UnAnchor.TextScaled = true
-UnAnchor.TextSize = 14.000
-UnAnchor.TextWrapped = true
+JumpPower_1.Name = "JumpPower"
+JumpPower_1.Parent = Player_1
+JumpPower_1.Active = true
+JumpPower_1.BackgroundColor3 = Color3.fromRGB(90,90,90)
+JumpPower_1.BorderColor3 = Color3.fromRGB(27,42,53)
+JumpPower_1.Position = UDim2.new(0.227905259, 0,0.0189767517, 0)
+JumpPower_1.Size = UDim2.new(0, 86,0, 77)
+JumpPower_1.Font = Enum.Font.Arial
+JumpPower_1.Text = "JumpPower"
+JumpPower_1.TextScaled = true
+JumpPower_1.TextSize = 14
+JumpPower_1.TextWrapped = true
 
-nvisible.Name = "İnvisible"
-nvisible.Parent = Player
-nvisible.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
-nvisible.Position = UDim2.new(0.853328943, 0, 0.0135859121, 0)
-nvisible.Size = UDim2.new(0, 86, 0, 77)
-nvisible.Font = Enum.Font.Arial
-nvisible.Text = "İnvisible"
-nvisible.TextColor3 = Color3.fromRGB(0, 0, 0)
-nvisible.TextScaled = true
-nvisible.TextSize = 14.000
-nvisible.TextWrapped = true
+Anchor_1.Name = "Anchor"
+Anchor_1.Parent = Player_1
+Anchor_1.Active = true
+Anchor_1.BackgroundColor3 = Color3.fromRGB(90,90,90)
+Anchor_1.BorderColor3 = Color3.fromRGB(27,42,53)
+Anchor_1.Position = UDim2.new(0.426210314, 0,0.0189767517, 0)
+Anchor_1.Size = UDim2.new(0, 86,0, 77)
+Anchor_1.Font = Enum.Font.Arial
+Anchor_1.Text = "Anchor Player"
+Anchor_1.TextScaled = true
+Anchor_1.TextSize = 14
+Anchor_1.TextWrapped = true
 
-infjp.Name = "infjp"
-infjp.Parent = Player
-infjp.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
-infjp.Position = UDim2.new(0.0262103081, 0, 0.266955197, 0)
-infjp.Size = UDim2.new(0, 86, 0, 77)
-infjp.Font = Enum.Font.Arial
-infjp.Text = "infinite jump"
-infjp.TextColor3 = Color3.fromRGB(0, 0, 0)
-infjp.TextScaled = true
-infjp.TextSize = 14.000
-infjp.TextWrapped = true
+UnAnchor_1.Name = "UnAnchor"
+UnAnchor_1.Parent = Player_1
+UnAnchor_1.Active = true
+UnAnchor_1.BackgroundColor3 = Color3.fromRGB(90,90,90)
+UnAnchor_1.BorderColor3 = Color3.fromRGB(27,42,53)
+UnAnchor_1.Position = UDim2.new(0.63468492, 0,0.018976748, 0)
+UnAnchor_1.Size = UDim2.new(0, 86,0, 77)
+UnAnchor_1.Font = Enum.Font.Arial
+UnAnchor_1.Text = "UnAnchor"
+UnAnchor_1.TextScaled = true
+UnAnchor_1.TextSize = 14
+UnAnchor_1.TextWrapped = true
 
-TextLabel.Parent = infjp
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.Position = UDim2.new(0, 0, 0.883116901, 0)
-TextLabel.Size = UDim2.new(0, 86, 0, 9)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "(press r)"
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.TextSize = 14.000
+Invisible_1.Name = "İnvisible"
+Invisible_1.Parent = Player_1
+Invisible_1.Active = true
+Invisible_1.BackgroundColor3 = Color3.fromRGB(90,90,90)
+Invisible_1.BorderColor3 = Color3.fromRGB(27,42,53)
+Invisible_1.Position = UDim2.new(0.853328943, 0,0.0135859121, 0)
+Invisible_1.Size = UDim2.new(0, 86,0, 77)
+Invisible_1.Font = Enum.Font.Arial
+Invisible_1.Text = "İnvisible"
+Invisible_1.TextScaled = true
+Invisible_1.TextSize = 14
+Invisible_1.TextWrapped = true
 
-Btools.Name = "Btools"
-Btools.Parent = Player
-Btools.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
-Btools.Position = UDim2.new(0.227905214, 0, 0.266955197, 0)
-Btools.Size = UDim2.new(0, 86, 0, 77)
-Btools.Font = Enum.Font.Arial
-Btools.Text = "Btools"
-Btools.TextColor3 = Color3.fromRGB(0, 0, 0)
-Btools.TextScaled = true
-Btools.TextSize = 14.000
-Btools.TextWrapped = true
+infjp_1.Name = "infjp"
+infjp_1.Parent = Player_1
+infjp_1.Active = true
+infjp_1.BackgroundColor3 = Color3.fromRGB(90,90,90)
+infjp_1.BorderColor3 = Color3.fromRGB(27,42,53)
+infjp_1.Position = UDim2.new(0.0262103081, 0,0.266955197, 0)
+infjp_1.Size = UDim2.new(0, 86,0, 77)
+infjp_1.Font = Enum.Font.Arial
+infjp_1.Text = "infinite jump"
+infjp_1.TextScaled = true
+infjp_1.TextSize = 14
+infjp_1.TextWrapped = true
 
-Night.Name = "Night"
-Night.Parent = Player
-Night.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
-Night.Position = UDim2.new(0.63468492, 0, 0.266955197, 0)
-Night.Size = UDim2.new(0, 86, 0, 77)
-Night.Font = Enum.Font.Arial
-Night.Text = "Night"
-Night.TextColor3 = Color3.fromRGB(0, 0, 0)
-Night.TextScaled = true
-Night.TextSize = 14.000
-Night.TextWrapped = true
+TextLabel_1.Parent = infjp_1
+TextLabel_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
+TextLabel_1.BackgroundTransparency = 1
+TextLabel_1.BorderColor3 = Color3.fromRGB(27,42,53)
+TextLabel_1.Position = UDim2.new(0, 0,0.883116901, 0)
+TextLabel_1.Size = UDim2.new(0, 86,0, 9)
+TextLabel_1.Text = "(press r)"
+TextLabel_1.TextSize = 14
 
-TextLabel_2.Parent = Night
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.Position = UDim2.new(0, 0, 0.883116901, 0)
-TextLabel_2.Size = UDim2.new(0, 86, 0, 8)
-TextLabel_2.Font = Enum.Font.SourceSans
+Btools_1.Name = "Btools"
+Btools_1.Parent = Player_1
+Btools_1.Active = true
+Btools_1.BackgroundColor3 = Color3.fromRGB(90,90,90)
+Btools_1.BorderColor3 = Color3.fromRGB(27,42,53)
+Btools_1.Position = UDim2.new(0.227905214, 0,0.266955197, 0)
+Btools_1.Size = UDim2.new(0, 86,0, 77)
+Btools_1.Font = Enum.Font.Arial
+Btools_1.Text = "Btools"
+Btools_1.TextScaled = true
+Btools_1.TextSize = 14
+Btools_1.TextWrapped = true
+
+Night_1.Name = "Night"
+Night_1.Parent = Player_1
+Night_1.Active = true
+Night_1.BackgroundColor3 = Color3.fromRGB(90,90,90)
+Night_1.BorderColor3 = Color3.fromRGB(27,42,53)
+Night_1.Position = UDim2.new(0.63468492, 0,0.266955197, 0)
+Night_1.Size = UDim2.new(0, 86,0, 77)
+Night_1.Font = Enum.Font.Arial
+Night_1.Text = "Night"
+Night_1.TextScaled = true
+Night_1.TextSize = 14
+Night_1.TextWrapped = true
+
+TextLabel_2.Parent = Night_1
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255,255,255)
+TextLabel_2.BackgroundTransparency = 1
+TextLabel_2.BorderColor3 = Color3.fromRGB(27,42,53)
+TextLabel_2.Position = UDim2.new(0, 0,0.883116901, 0)
+TextLabel_2.Size = UDim2.new(0, 86,0, 8)
 TextLabel_2.Text = "(only you)"
-TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.TextSize = 14.000
+TextLabel_2.TextSize = 14
 TextLabel_2.TextWrapped = true
 
-NoFog.Name = "NoFog"
-NoFog.Parent = Player
-NoFog.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
-NoFog.Position = UDim2.new(0.853329003, 0, 0.266955197, 0)
-NoFog.Size = UDim2.new(0, 86, 0, 77)
-NoFog.Font = Enum.Font.Arial
-NoFog.Text = "NoFog"
-NoFog.TextColor3 = Color3.fromRGB(0, 0, 0)
-NoFog.TextScaled = true
-NoFog.TextSize = 14.000
-NoFog.TextWrapped = true
+NoFog_1.Name = "NoFog"
+NoFog_1.Parent = Player_1
+NoFog_1.Active = true
+NoFog_1.BackgroundColor3 = Color3.fromRGB(90,90,90)
+NoFog_1.BorderColor3 = Color3.fromRGB(27,42,53)
+NoFog_1.Position = UDim2.new(0.853329003, 0,0.266955197, 0)
+NoFog_1.Size = UDim2.new(0, 86,0, 77)
+NoFog_1.Font = Enum.Font.Arial
+NoFog_1.Text = "NoFog"
+NoFog_1.TextScaled = true
+NoFog_1.TextSize = 14
+NoFog_1.TextWrapped = true
 
-TextLabel_3.Parent = NoFog
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.Position = UDim2.new(-8.94069672e-08, 0, 0.896103919, 0)
-TextLabel_3.Size = UDim2.new(0, 86, 0, 8)
-TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Parent = NoFog_1
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255,255,255)
+TextLabel_3.BackgroundTransparency = 1
+TextLabel_3.BorderColor3 = Color3.fromRGB(27,42,53)
+TextLabel_3.Position = UDim2.new(-8.94069672e-08, 0,0.896103919, 0)
+TextLabel_3.Size = UDim2.new(0, 86,0, 8)
 TextLabel_3.Text = "(only you)"
-TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.TextSize = 14.000
+TextLabel_3.TextSize = 14
 TextLabel_3.TextWrapped = true
 
-morning.Name = "morning"
-morning.Parent = Player
-morning.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
-morning.Position = UDim2.new(0.426210344, 0, 0.266955197, 0)
-morning.Size = UDim2.new(0, 86, 0, 77)
-morning.Font = Enum.Font.Arial
-morning.Text = "morning"
-morning.TextColor3 = Color3.fromRGB(0, 0, 0)
-morning.TextScaled = true
-morning.TextSize = 14.000
-morning.TextWrapped = true
+morning_1.Name = "morning"
+morning_1.Parent = Player_1
+morning_1.Active = true
+morning_1.BackgroundColor3 = Color3.fromRGB(90,90,90)
+morning_1.BorderColor3 = Color3.fromRGB(27,42,53)
+morning_1.Position = UDim2.new(0.426210344, 0,0.266955197, 0)
+morning_1.Size = UDim2.new(0, 86,0, 77)
+morning_1.Font = Enum.Font.Arial
+morning_1.Text = "morning"
+morning_1.TextScaled = true
+morning_1.TextSize = 14
+morning_1.TextWrapped = true
 
-TextLabel_4.Parent = morning
-TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.BackgroundTransparency = 1.000
-TextLabel_4.Position = UDim2.new(0, 0, 0.883116901, 0)
-TextLabel_4.Size = UDim2.new(0, 86, 0, 8)
-TextLabel_4.Font = Enum.Font.SourceSans
+TextLabel_4.Parent = morning_1
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255,255,255)
+TextLabel_4.BackgroundTransparency = 1
+TextLabel_4.BorderColor3 = Color3.fromRGB(27,42,53)
+TextLabel_4.Position = UDim2.new(0, 0,0.883116901, 0)
+TextLabel_4.Size = UDim2.new(0, 86,0, 8)
 TextLabel_4.Text = "(only you)"
-TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_4.TextSize = 14.000
+TextLabel_4.TextSize = 14
 TextLabel_4.TextWrapped = true
 
-SpeedFrame.Name = "SpeedFrame"
-SpeedFrame.Parent = Gui
-SpeedFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-SpeedFrame.Position = UDim2.new(0.185082868, 0, 0.118764848, 0)
-SpeedFrame.Size = UDim2.new(0, 590, 0, 371)
-SpeedFrame.Visible = false
+SpeedFrame_1.Name = "SpeedFrame"
+SpeedFrame_1.Parent = Gui_1
+SpeedFrame_1.BackgroundColor3 = Color3.fromRGB(0,0,0)
+SpeedFrame_1.BorderColor3 = Color3.fromRGB(27,42,53)
+SpeedFrame_1.Position = UDim2.new(0.185082868, 0,0.118764848, 0)
+SpeedFrame_1.Size = UDim2.new(0, 590,0, 371)
+SpeedFrame_1.Visible = false
 
-Amount.Name = "Amount"
-Amount.Parent = SpeedFrame
-Amount.BackgroundColor3 = Color3.fromRGB(104, 104, 104)
-Amount.Position = UDim2.new(0.330508471, 0, 0.146276593, 0)
-Amount.Size = UDim2.new(0, 208, 0, 60)
-Amount.Font = Enum.Font.Fantasy
-Amount.PlaceholderColor3 = Color3.fromRGB(170, 85, 255)
-Amount.Text = "Text here..."
-Amount.TextColor3 = Color3.fromRGB(0, 0, 0)
-Amount.TextScaled = true
-Amount.TextSize = 14.000
-Amount.TextWrapped = true
+Amount_1.Name = "Amount"
+Amount_1.Parent = SpeedFrame_1
+Amount_1.Active = true
+Amount_1.BackgroundColor3 = Color3.fromRGB(104,104,104)
+Amount_1.BorderColor3 = Color3.fromRGB(27,42,53)
+Amount_1.Position = UDim2.new(0.330508471, 0,0.146276593, 0)
+Amount_1.Size = UDim2.new(0, 208,0, 60)
+Amount_1.Font = Enum.Font.Fantasy
+Amount_1.PlaceholderColor3 = Color3.fromRGB(170,85,255)
+Amount_1.PlaceholderText = ""
+Amount_1.Text = "Text here..."
+Amount_1.TextScaled = true
+Amount_1.TextSize = 14
+Amount_1.TextWrapped = true
 
-UICorner_2.Parent = Amount
+UICorner_2.Parent = Amount_1
 
-Set.Name = "Set"
-Set.Parent = SpeedFrame
-Set.BackgroundColor3 = Color3.fromRGB(85, 255, 0)
-Set.Position = UDim2.new(0, 15, 0, 144)
-Set.Size = UDim2.new(0, 171, 0, 69)
-Set.Font = Enum.Font.Fondamento
-Set.Text = "SET SPEED"
-Set.TextColor3 = Color3.fromRGB(0, 0, 0)
-Set.TextScaled = true
-Set.TextSize = 14.000
-Set.TextWrapped = true
+Set_1.Name = "Set"
+Set_1.Parent = SpeedFrame_1
+Set_1.Active = true
+Set_1.BackgroundColor3 = Color3.fromRGB(85,255,0)
+Set_1.BorderColor3 = Color3.fromRGB(27,42,53)
+Set_1.Position = UDim2.new(0, 15,0, 144)
+Set_1.Size = UDim2.new(0, 171,0, 69)
+Set_1.Font = Enum.Font.Fondamento
+Set_1.Text = "SET SPEED"
+Set_1.TextScaled = true
+Set_1.TextSize = 14
+Set_1.TextWrapped = true
 
-UICorner_3.Parent = Set
+UICorner_3.Parent = Set_1
 
-Reset.Name = "Reset"
-Reset.Parent = SpeedFrame
-Reset.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-Reset.Position = UDim2.new(0, 383, 0, 144)
-Reset.Size = UDim2.new(0, 186, 0, 69)
-Reset.Font = Enum.Font.Fondamento
-Reset.Text = "RESET SPEED"
-Reset.TextColor3 = Color3.fromRGB(0, 0, 0)
-Reset.TextScaled = true
-Reset.TextSize = 14.000
-Reset.TextWrapped = true
+Reset_1.Name = "Reset"
+Reset_1.Parent = SpeedFrame_1
+Reset_1.Active = true
+Reset_1.BackgroundColor3 = Color3.fromRGB(255,0,0)
+Reset_1.BorderColor3 = Color3.fromRGB(27,42,53)
+Reset_1.Position = UDim2.new(0, 383,0, 144)
+Reset_1.Size = UDim2.new(0, 186,0, 69)
+Reset_1.Font = Enum.Font.Fondamento
+Reset_1.Text = "RESET SPEED"
+Reset_1.TextScaled = true
+Reset_1.TextSize = 14
+Reset_1.TextWrapped = true
 
-UICorner_4.Parent = Reset
+UICorner_4.Parent = Reset_1
 
-SelectMain.Name = "SelectMain"
-SelectMain.Parent = Gui
-SelectMain.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-SelectMain.Position = UDim2.new(0, 0, 0.118764848, 0)
-SelectMain.Size = UDim2.new(0, 134, 0, 50)
-SelectMain.Font = Enum.Font.FredokaOne
-SelectMain.Text = "Main"
-SelectMain.TextColor3 = Color3.fromRGB(0, 0, 0)
-SelectMain.TextScaled = true
-SelectMain.TextSize = 14.000
-SelectMain.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-SelectMain.TextStrokeTransparency = 0.000
-SelectMain.TextWrapped = true
+SelectMain_1.Name = "SelectMain"
+SelectMain_1.Parent = Gui_1
+SelectMain_1.Active = true
+SelectMain_1.BackgroundColor3 = Color3.fromRGB(0,0,0)
+SelectMain_1.BorderColor3 = Color3.fromRGB(27,42,53)
+SelectMain_1.Position = UDim2.new(0, 0,0.118764848, 0)
+SelectMain_1.Size = UDim2.new(0, 134,0, 50)
+SelectMain_1.Font = Enum.Font.FredokaOne
+SelectMain_1.Text = "Main"
+SelectMain_1.TextScaled = true
+SelectMain_1.TextSize = 14
+SelectMain_1.TextStrokeColor3 = Color3.fromRGB(255,255,255)
+SelectMain_1.TextStrokeTransparency = 0
+SelectMain_1.TextWrapped = true
 
-Main.Name = "Main"
-Main.Parent = Gui
-Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Main.BackgroundTransparency = 1.000
-Main.Position = UDim2.new(0, 134, 0, 50)
-Main.Size = UDim2.new(0, 590, 0, 371)
-Main.Visible = false
+Main_1.Name = "Main"
+Main_1.Parent = Gui_1
+Main_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
+Main_1.BackgroundTransparency = 1
+Main_1.BorderColor3 = Color3.fromRGB(27,42,53)
+Main_1.Position = UDim2.new(0, 134,0, 50)
+Main_1.Size = UDim2.new(0, 590,0, 371)
+Main_1.Visible = false
 
-TextLabel_5.Parent = Main
-TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_5.BackgroundTransparency = 1.000
-TextLabel_5.Position = UDim2.new(0, 53, 0, 23)
-TextLabel_5.Size = UDim2.new(0, 314, 0, 77)
+TextLabel_5.Parent = Main_1
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255,255,255)
+TextLabel_5.BackgroundTransparency = 1
+TextLabel_5.BorderColor3 = Color3.fromRGB(27,42,53)
+TextLabel_5.Position = UDim2.new(0, 53,0, 23)
+TextLabel_5.Size = UDim2.new(0, 314,0, 77)
 TextLabel_5.Font = Enum.Font.Bangers
 TextLabel_5.Text = "-MADE BY KERTENKELE_664"
-TextLabel_5.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_5.TextScaled = true
-TextLabel_5.TextSize = 14.000
+TextLabel_5.TextSize = 14
 TextLabel_5.TextWrapped = true
 
-TextLabel_6.Parent = Main
-TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_6.BackgroundTransparency = 1.000
-TextLabel_6.Position = UDim2.new(0, 53, 0, 120)
-TextLabel_6.Size = UDim2.new(0, 304, 0, 125)
+TextLabel_6.Parent = Main_1
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255,255,255)
+TextLabel_6.BackgroundTransparency = 1
+TextLabel_6.BorderColor3 = Color3.fromRGB(27,42,53)
+TextLabel_6.Position = UDim2.new(0, 53,0, 120)
+TextLabel_6.Size = UDim2.new(0, 304,0, 125)
 TextLabel_6.Font = Enum.Font.Bangers
 TextLabel_6.Text = "Thanks For Using Hsyn GUI"
-TextLabel_6.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_6.TextScaled = true
-TextLabel_6.TextSize = 14.000
+TextLabel_6.TextSize = 14
 TextLabel_6.TextWrapped = true
 
-JumpFrame.Name = "JumpFrame"
-JumpFrame.Parent = Gui
-JumpFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-JumpFrame.Position = UDim2.new(0, 134, 0, 50)
-JumpFrame.Size = UDim2.new(0, 590, 0, 371)
-JumpFrame.Visible = false
+JumpFrame_1.Name = "JumpFrame"
+JumpFrame_1.Parent = Gui_1
+JumpFrame_1.BackgroundColor3 = Color3.fromRGB(0,0,0)
+JumpFrame_1.BorderColor3 = Color3.fromRGB(27,42,53)
+JumpFrame_1.Position = UDim2.new(0, 134,0, 50)
+JumpFrame_1.Size = UDim2.new(0, 590,0, 371)
+JumpFrame_1.Visible = false
 
 Amount_2.Name = "Amount"
-Amount_2.Parent = JumpFrame
-Amount_2.BackgroundColor3 = Color3.fromRGB(125, 125, 125)
-Amount_2.Position = UDim2.new(0, 166, 0, 50)
-Amount_2.Size = UDim2.new(0, 254, 0, 70)
+Amount_2.Parent = JumpFrame_1
+Amount_2.Active = true
+Amount_2.BackgroundColor3 = Color3.fromRGB(125,125,125)
+Amount_2.BorderColor3 = Color3.fromRGB(27,42,53)
+Amount_2.Position = UDim2.new(0, 166,0, 50)
+Amount_2.Size = UDim2.new(0, 254,0, 70)
 Amount_2.Font = Enum.Font.Fondamento
+Amount_2.PlaceholderColor3 = Color3.fromRGB(178,178,178)
+Amount_2.PlaceholderText = ""
 Amount_2.Text = "Text Here..."
-Amount_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 Amount_2.TextScaled = true
-Amount_2.TextSize = 14.000
+Amount_2.TextSize = 14
 Amount_2.TextWrapped = true
 
 UICorner_5.Parent = Amount_2
 
 JumpPower_2.Name = "JumpPower"
-JumpPower_2.Parent = JumpFrame
-JumpPower_2.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-JumpPower_2.Position = UDim2.new(0, 33, 0, 180)
-JumpPower_2.Size = UDim2.new(0, 198, 0, 85)
+JumpPower_2.Parent = JumpFrame_1
+JumpPower_2.Active = true
+JumpPower_2.BackgroundColor3 = Color3.fromRGB(0,255,0)
+JumpPower_2.BorderColor3 = Color3.fromRGB(27,42,53)
+JumpPower_2.Position = UDim2.new(0, 33,0, 180)
+JumpPower_2.Size = UDim2.new(0, 198,0, 85)
 JumpPower_2.Font = Enum.Font.Fondamento
+JumpPower_2.RichText = true
 JumpPower_2.Text = "Set JumpPower"
-JumpPower_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 JumpPower_2.TextScaled = true
-JumpPower_2.TextSize = 14.000
+JumpPower_2.TextSize = 14
 JumpPower_2.TextWrapped = true
 
 UICorner_6.Parent = JumpPower_2
 
-ResetPower.Name = "ResetPower"
-ResetPower.Parent = JumpFrame
-ResetPower.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-ResetPower.Position = UDim2.new(0, 339, 0, 180)
-ResetPower.Size = UDim2.new(0, 198, 0, 85)
-ResetPower.Font = Enum.Font.Fondamento
-ResetPower.Text = "Reset JumpPower"
-ResetPower.TextColor3 = Color3.fromRGB(0, 0, 0)
-ResetPower.TextScaled = true
-ResetPower.TextSize = 14.000
-ResetPower.TextWrapped = true
+ResetPower_1.Name = "ResetPower"
+ResetPower_1.Parent = JumpFrame_1
+ResetPower_1.Active = true
+ResetPower_1.BackgroundColor3 = Color3.fromRGB(255,0,0)
+ResetPower_1.BorderColor3 = Color3.fromRGB(27,42,53)
+ResetPower_1.Position = UDim2.new(0, 339,0, 180)
+ResetPower_1.Size = UDim2.new(0, 198,0, 85)
+ResetPower_1.Font = Enum.Font.Fondamento
+ResetPower_1.RichText = true
+ResetPower_1.Text = "Reset JumpPower"
+ResetPower_1.TextScaled = true
+ResetPower_1.TextSize = 14
+ResetPower_1.TextWrapped = true
 
-UICorner_7.Parent = ResetPower
+UICorner_7.Parent = ResetPower_1
 
-UICorner_8.Parent = Gui
+UICorner_8.Parent = Gui_1
 
-Visuals.Name = "Visuals"
-Visuals.Parent = Gui
-Visuals.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Visuals.Position = UDim2.new(0, 0, 0.356294543, 0)
-Visuals.Size = UDim2.new(0, 134, 0, 50)
-Visuals.Font = Enum.Font.FredokaOne
-Visuals.Text = "Visuals"
-Visuals.TextColor3 = Color3.fromRGB(0, 0, 0)
-Visuals.TextScaled = true
-Visuals.TextSize = 14.000
-Visuals.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-Visuals.TextStrokeTransparency = 0.000
-Visuals.TextWrapped = true
+Visuals_1.Name = "Visuals"
+Visuals_1.Parent = Gui_1
+Visuals_1.Active = true
+Visuals_1.BackgroundColor3 = Color3.fromRGB(0,0,0)
+Visuals_1.BorderColor3 = Color3.fromRGB(27,42,53)
+Visuals_1.Position = UDim2.new(0, 0,0.356294543, 0)
+Visuals_1.Size = UDim2.new(0, 134,0, 50)
+Visuals_1.Font = Enum.Font.FredokaOne
+Visuals_1.Text = "Visuals"
+Visuals_1.TextScaled = true
+Visuals_1.TextSize = 14
+Visuals_1.TextStrokeColor3 = Color3.fromRGB(255,255,255)
+Visuals_1.TextStrokeTransparency = 0
+Visuals_1.TextWrapped = true
 
-Visual.Name = "Visual"
-Visual.Parent = Gui
-Visual.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Visual.BackgroundTransparency = 0.300
-Visual.Position = UDim2.new(0.185082868, 0, 0.118764848, 0)
-Visual.Size = UDim2.new(0, 589, 0, 371)
-Visual.Visible = false
+Visual_1.Name = "Visual"
+Visual_1.Parent = Gui_1
+Visual_1.BackgroundColor3 = Color3.fromRGB(0,0,0)
+Visual_1.BackgroundTransparency = 0.30000001192092896
+Visual_1.BorderColor3 = Color3.fromRGB(27,42,53)
+Visual_1.Position = UDim2.new(0.185082868, 0,0.118764848, 0)
+Visual_1.Size = UDim2.new(0, 589,0, 371)
+Visual_1.Visible = false
 
-Esp.Name = "Esp"
-Esp.Parent = Visual
-Esp.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
-Esp.Position = UDim2.new(0.0241701156, 0, 0.0189767517, 0)
-Esp.Size = UDim2.new(0, 86, 0, 77)
-Esp.Font = Enum.Font.Arial
-Esp.Text = "Esp"
-Esp.TextColor3 = Color3.fromRGB(0, 0, 0)
-Esp.TextScaled = true
-Esp.TextSize = 14.000
-Esp.TextWrapped = true
+Esp_1.Name = "Esp"
+Esp_1.Parent = Visual_1
+Esp_1.Active = true
+Esp_1.BackgroundColor3 = Color3.fromRGB(90,90,90)
+Esp_1.BorderColor3 = Color3.fromRGB(27,42,53)
+Esp_1.Position = UDim2.new(0.0241701156, 0,0.0189767517, 0)
+Esp_1.Size = UDim2.new(0, 86,0, 77)
+Esp_1.Font = Enum.Font.Arial
+Esp_1.Text = "Esp"
+Esp_1.TextScaled = true
+Esp_1.TextSize = 14
+Esp_1.TextWrapped = true
 
-OpenFrame.Name = "OpenFrame"
-OpenFrame.Parent = HsynGUI
-OpenFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-OpenFrame.Position = UDim2.new(0.00793078542, 0, 0.470370352, 0)
-OpenFrame.Size = UDim2.new(0, 201, 0, 48)
+OpenFrame_1.Name = "OpenFrame"
+OpenFrame_1.Parent = HsynGUI
+OpenFrame_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
+OpenFrame_1.BorderColor3 = Color3.fromRGB(27,42,53)
+OpenFrame_1.Position = UDim2.new(0.00793078542, 0,0.470370352, 0)
+OpenFrame_1.Size = UDim2.new(0, 201,0, 48)
 
-Open.Name = "Open"
-Open.Parent = OpenFrame
-Open.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Open.BackgroundTransparency = 0.450
-Open.Position = UDim2.new(0.00497512426, 0, 0, 0)
-Open.Size = UDim2.new(0, 200, 0, 48)
-Open.Font = Enum.Font.Cartoon
-Open.Text = "Open GUI"
-Open.TextColor3 = Color3.fromRGB(0, 0, 0)
-Open.TextScaled = true
-Open.TextSize = 14.000
-Open.TextWrapped = true
+Open_1.Name = "Open"
+Open_1.Parent = OpenFrame_1
+Open_1.Active = true
+Open_1.BackgroundColor3 = Color3.fromRGB(0,0,0)
+Open_1.BackgroundTransparency = 0.44999998807907104
+Open_1.BorderColor3 = Color3.fromRGB(27,42,53)
+Open_1.Position = UDim2.new(0.00497512426, 0,0, 0)
+Open_1.Size = UDim2.new(0, 200,0, 48)
+Open_1.Font = Enum.Font.Cartoon
+Open_1.Text = "Open GUI"
+Open_1.TextScaled = true
+Open_1.TextSize = 14
+Open_1.TextWrapped = true
 
--- Scripts:
-
-local function JXLQ_fake_script() -- Close.LocalScript 
-	local script = Instance.new('LocalScript', Close)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.Parent.Gui.Visible = false
-	end)
-end
-coroutine.wrap(JXLQ_fake_script)()
-local function UAFKLY_fake_script() -- SelectPlayer.LocalScript 
-	local script = Instance.new('LocalScript', SelectPlayer)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Player.Visible = true
-		script.Parent.Parent.SpeedFrame.Visible = false
-		script.Parent.Parent.Main.Visible = false
-		script.Parent.Parent.JumpFrame.Visible = false
-		script.Parent.Parent.Visual.Visible = false
-	end)
-end
-coroutine.wrap(UAFKLY_fake_script)()
-local function JLSC_fake_script() -- SpeedHack.LocalScript 
-	local script = Instance.new('LocalScript', SpeedHack)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.SpeedFrame.Visible = true
-		script.Parent.Parent.Parent.Main.Visible = false
-		script.Parent.Parent.Parent.Player.Visible = false
-		script.Parent.Parent.Parent.TeleportFrame.Visible = false
-	end)
-end
-coroutine.wrap(JLSC_fake_script)()
-local function RUZZS_fake_script() -- JumpPower.LocalScript 
-	local script = Instance.new('LocalScript', JumpPower)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.JumpFrame.Visible = true
-		script.Parent.Parent.Parent.Main.Visible = false
-		script.Parent.Parent.Parent.Player.Visible = false
-		script.Parent.Parent.Parent.SpeedFrame.Visible = false
-		script.Parent.Parent.Parent.TeleportFrame.Visible = false
-	end)
-end
-coroutine.wrap(RUZZS_fake_script)()
-local function TBZT_fake_script() -- Anchor.LocalScript 
-	local script = Instance.new('LocalScript', Anchor)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local player = game.Players.LocalPlayer
-		local character = player.Character
-		local humanoid = character:WaitForChild("Humanoid")
-		
-		character.HumanoidRootPart.Anchored = true
-	end)
-end
-coroutine.wrap(TBZT_fake_script)()
-local function OTOF_fake_script() -- UnAnchor.LocalScript 
-	local script = Instance.new('LocalScript', UnAnchor)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local player = game.Players.LocalPlayer
-		local character = player.Character
-		local humanoid = character:WaitForChild("Humanoid")
-		
-		character.HumanoidRootPart.Anchored = false
-	end)
-end
-coroutine.wrap(OTOF_fake_script)()
-local function KESZRZU_fake_script() -- nvisible.LocalScript 
-	local script = Instance.new('LocalScript', nvisible)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local player = game.Players.LocalPlayer
-		local character = player.Character
-		local humanoid = character:WaitForChild("Humanoid")
-		
-		character.LeftUpperLeg:Destroy()
-		character.LeftFoot:Destroy()
-		character.LeftLowerLeg:Destroy()
-		character.RightUpperLeg:Destroy()
-		character.RightLowerLeg:Destroy()
-		character.LeftUpperArm:Destroy()
-		character.LeftLowerArm:Destroy()
-		character.RightUpperArm:Destroy()
-		character.RightLowerArm:Destroy()
-		character.Head.face:Destroy()
-		character.LeftHand:Destroy()
-		character.RightFoot:Destroy()
-		character.RightHand:Destroy()
-		
-	end)
-end
-coroutine.wrap(KESZRZU_fake_script)()
-local function KRQHFO_fake_script() -- infjp.LocalScript 
-	local script = Instance.new('LocalScript', infjp)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		_G.infinjump = true
-		local Player = game:GetService("Players").LocalPlayer
-		local Mouse = Player:GetMouse()
-		Mouse.KeyDown:connect(function(k)
-			if _G.infinjump then
-				if k:byte() == 32 then
-					local Humanoid = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
-					Humanoid:ChangeState("Jumping")
-					wait(0.1)
-					Humanoid:ChangeState("Seated")
-				end
-			end
-		end)
-	
-		local Player = game:GetService("Players").LocalPlayer
-		local Mouse = Player:GetMouse()
-		Mouse.KeyDown:connect(function(k)
-			k = k:lower()
-			if k == "r" then
-				if _G.infinjump == true then
-					_G.infinjump = false
-				else
-					_G.infinjump = true
-				end
-			end
-		end)
-	end)
-end
-coroutine.wrap(KRQHFO_fake_script)()
-local function EMSUZN_fake_script() -- Btools.LocalScript 
-	local script = Instance.new('LocalScript', Btools)
-
-	btools = script.Parent
-	
-	btools.MouseButton1Click:Connect(function()
-		game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
-		for index, child in pairs(game:GetService("Workspace"):GetChildren()) do
-			if child.ClassName == "Part" then
-				child.Locked = false
-			end
-			if child.ClassName == "MeshPart" then
-				child.Locked = false
-			end
-			if child.ClassName == "UnionOperation" then
-				child.Locked = false
-			end
-			if child.ClassName == "Model" then
-				for index, chil in pairs(child:GetChildren()) do
-					if chil.ClassName == "Part" then
-						chil.Locked = false
-					end
-					if chil.ClassName == "MeshPart" then
-						chil.Locked = false
-					end
-					if chil.ClassName == "UnionOperation" then
-						chil.Locked = false
-					end
-					if chil.ClassName == "Model" then
-						for index, childe in pairs(chil:GetChildren()) do
-							if childe.ClassName == "Part" then
-								childe.Locked = false
-							end
-							if childe.ClassName == "MeshPart" then
-								childe.Locked = false
-							end
-							if childe.ClassName == "UnionOperation" then
-								childe.Locked = false
-							end
-							if childe.ClassName == "Model" then
-								for index, childeo in pairs(childe:GetChildren()) do
-									if childeo.ClassName == "Part" then
-										childeo.Locked = false
-									end
-									if childeo.ClassName == "MeshPart" then
-										childeo.Locked = false
-									end
-									if childeo.ClassName == "UnionOperation" then
-										childeo.Locked = false
-									end
-									if childeo.ClassName == "Model" then
-									end
-								end
-							end
-						end
-					end
-				end
-			end
-		end
-		local c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
-		c.BinType = Enum.BinType.Hammer
-		c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
-		c.BinType = Enum.BinType.Clone
-		c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
-		c.BinType = Enum.BinType.Grab
-	end)
-end
-coroutine.wrap(EMSUZN_fake_script)()
-local function TZZNBDV_fake_script() -- Night.LocalScript 
-	local script = Instance.new('LocalScript', Night)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		game.Lighting.TimeOfDay = "00:00:00"
-		
-	end)
-end
-coroutine.wrap(TZZNBDV_fake_script)()
-local function JWALXDZ_fake_script() -- NoFog.LocalScript 
-	local script = Instance.new('LocalScript', NoFog)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local player = game.Players.LocalPlayer
-		local character = player.Character
-		local HumanoidRootPart = character.HumanoidRootPart
-		
-		game.Lighting.FogEnd = 1000000000000000
-	end)
-end
-coroutine.wrap(JWALXDZ_fake_script)()
-local function NPJCWEZ_fake_script() -- morning.LocalScript 
-	local script = Instance.new('LocalScript', morning)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		game.Lighting.TimeOfDay = "14:00:00"
-		
-	end)
-end
-coroutine.wrap(NPJCWEZ_fake_script)()
-local function XXPLYPZ_fake_script() -- Set.LocalScript 
-	local script = Instance.new('LocalScript', Set)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local character = game.Players.LocalPlayer.Character
-		local humanoid = character:WaitForChild("Humanoid")
-		
-		humanoid.WalkSpeed = (script.Parent.Parent.Amount.Text)
-	end)
-end
-coroutine.wrap(XXPLYPZ_fake_script)()
-local function UGXJWY_fake_script() -- Reset.LocalScript 
-	local script = Instance.new('LocalScript', Reset)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local character = game.Players.LocalPlayer.Character
-		local humanoid = character:WaitForChild("Humanoid")
-	
-		humanoid.WalkSpeed = 16
-		
-	end)
-end
-coroutine.wrap(UGXJWY_fake_script)()
-local function AXKRJ_fake_script() -- SelectMain.LocalScript 
-	local script = Instance.new('LocalScript', SelectMain)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Player.Visible = false
-		script.Parent.Parent.Main.Visible = true
-		script.Parent.Parent.SpeedFrame.Visible = false
-		script.Parent.Parent.TeleportFrame.Visible = false
-		script.Parent.Parent.Visual.Visible = false
-	end)
-end
-coroutine.wrap(AXKRJ_fake_script)()
-local function AYBOTPD_fake_script() -- JumpPower_2.LocalScript 
-	local script = Instance.new('LocalScript', JumpPower_2)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local character = game.Players.LocalPlayer.Character
-		local humanoid = character:WaitForChild("Humanoid")
-	
-		humanoid.JumpPower = (script.Parent.Parent.Amount.Text)
-		
-	end)
-end
-coroutine.wrap(AYBOTPD_fake_script)()
-local function DFYPKVC_fake_script() -- ResetPower.LocalScript 
-	local script = Instance.new('LocalScript', ResetPower)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local character = game.Players.LocalPlayer.Character
-		local humanoid = character:WaitForChild("Humanoid")
-	
-		humanoid.JumpPower = 50
-		
-	end)
-end
-coroutine.wrap(DFYPKVC_fake_script)()
-local function AQKS_fake_script() -- Visuals.LocalScript 
-	local script = Instance.new('LocalScript', Visuals)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Visual.Visible = true
-		script.Parent.Parent.SpeedFrame.Visible = false
-		script.Parent.Parent.Main.Visible = false
-		script.Parent.Parent.JumpFrame.Visible = false
-	end)
-end
-coroutine.wrap(AQKS_fake_script)()
-local function DRITYLA_fake_script() -- Esp.LocalScript 
-	local script = Instance.new('LocalScript', Esp)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local Players = game:GetService("Players"):GetChildren()
-		local RunService = game:GetService("RunService")
-		local Highlight = Instance.new("Highlight")
-		Highlight.Name = "HighLight"
-	
-		for i, v in pairs(Players) do
-		repeat wait() until v.Character
-		if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("HighLight") then
-			local HighLightClone = Highlight:Clone()
-			HighLightClone.Adornee = v.Character
-			HighLightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart")
-			HighLightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-			HighLightClone.Name = "HighLight"
-		end
-		
-	
-		game.Players.PlayerAdded:Connect(function(player)
-		repeat wait() until player.Character
-		if not player.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("HighLight") then
-		local HighLightClone = Highlight:Clone()
-		HighLightClone.Adornee = player.Character
-		HighLightClone.Parent = player.Character.FindFirstChild("HumanoidRootPart")
-		HighLightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-		end
-		end)
-	
-		game.Players.PlayerRemoving:Connect(function(playerRemoved)
-		playerRemoved.Character:FindFirstChild("HumanoidRootPart").HighLight:Destroy()
-		end)
-	
-	
-		RunService.HeartBeat:Connect(function()
-		for i, v in pairs(Players) do
-			repeat wait() until v.Character
-			if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("HighLight") then
-				local HighLightClone = Highlight:Clone()
-				HighLightClone.Adornee = v.Character
-				HighLightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart")
-				HighLightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-				HighLightClone.Name "HighLight"
-				task.wait()
-				end
-			end
-	end)
-	end)
-	
-end
-coroutine.wrap(DRITYLA_fake_script)()
-local function SDDIC_fake_script() -- Open.LocalScript 
-	local script = Instance.new('LocalScript', Open)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.Gui.Visible = true
-	end)
-end
-coroutine.wrap(SDDIC_fake_script)()
+UIStroke_3.Parent = OpenFrame_1
+UIStroke_3.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+UIStroke_3.Thickness = 6.099999904632568
