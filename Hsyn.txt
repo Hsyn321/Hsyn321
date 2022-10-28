@@ -1,5 +1,4 @@
--- Gui to Lua
--- Version: 3.2
+-- Monstrum's Gui to Lua\n-- Version: 3.2
 
 -- Instances:
 
@@ -8,6 +7,8 @@ local Gui = Instance.new("Frame")
 local GuiName = Instance.new("TextLabel")
 local Close = Instance.new("TextButton")
 local UICorner = Instance.new("UICorner")
+local UIStroke = Instance.new("UIStroke")
+local UIStroke_2 = Instance.new("UIStroke")
 local Info = Instance.new("TextLabel")
 local SelectPlayer = Instance.new("TextButton")
 local Player = Instance.new("Frame")
@@ -15,16 +16,18 @@ local SpeedHack = Instance.new("TextButton")
 local JumpPower = Instance.new("TextButton")
 local Anchor = Instance.new("TextButton")
 local UnAnchor = Instance.new("TextButton")
-local Invisible = Instance.new("TextButton")
+local nvisible = Instance.new("TextButton")
 local infjp = Instance.new("TextButton")
 local TextLabel = Instance.new("TextLabel")
 local Btools = Instance.new("TextButton")
-local Night = Instance.new("TextButton")
 local TextLabel_2 = Instance.new("TextLabel")
-local NoFog = Instance.new("TextButton")
+local Night = Instance.new("TextButton")
 local TextLabel_3 = Instance.new("TextLabel")
+local TpPlayer = Instance.new("TextButton")
 local morning = Instance.new("TextButton")
 local TextLabel_4 = Instance.new("TextLabel")
+local NoFog = Instance.new("TextButton")
+local TextLabel_5 = Instance.new("TextLabel")
 local SpeedFrame = Instance.new("Frame")
 local Amount = Instance.new("TextBox")
 local UICorner_2 = Instance.new("UICorner")
@@ -34,8 +37,8 @@ local Reset = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
 local SelectMain = Instance.new("TextButton")
 local Main = Instance.new("Frame")
-local TextLabel_5 = Instance.new("TextLabel")
 local TextLabel_6 = Instance.new("TextLabel")
+local TextLabel_7 = Instance.new("TextLabel")
 local JumpFrame = Instance.new("Frame")
 local Amount_2 = Instance.new("TextBox")
 local UICorner_5 = Instance.new("UICorner")
@@ -44,8 +47,19 @@ local UICorner_6 = Instance.new("UICorner")
 local ResetPower = Instance.new("TextButton")
 local UICorner_7 = Instance.new("UICorner")
 local UICorner_8 = Instance.new("UICorner")
+local Visuals = Instance.new("TextButton")
+local Visual = Instance.new("Frame")
+local Esp = Instance.new("TextButton")
+local TpFrame = Instance.new("Frame")
+local Teleport = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local Close_2 = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local Amount_3 = Instance.new("TextBox")
+local UICorner_11 = Instance.new("UICorner")
 local OpenFrame = Instance.new("Frame")
 local Open = Instance.new("TextButton")
+local UIStroke_3 = Instance.new("UIStroke")
 
 --Properties:
 
@@ -87,6 +101,12 @@ Close.TextWrapped = true
 
 UICorner.Parent = Close
 
+UIStroke.Parent = Close
+UIStroke.Thickness = 5.700
+
+UIStroke_2.Parent = Gui
+UIStroke_2.Thickness = 11.100
+
 Info.Name = "Info"
 Info.Parent = Gui
 Info.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -119,6 +139,7 @@ Player.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Player.BackgroundTransparency = 0.300
 Player.Position = UDim2.new(0.185082883, 0, 0.118764848, 0)
 Player.Size = UDim2.new(0, 590, 0, 371)
+Player.Visible = false
 
 SpeedHack.Name = "SpeedHack"
 SpeedHack.Parent = Player
@@ -168,17 +189,17 @@ UnAnchor.TextScaled = true
 UnAnchor.TextSize = 14.000
 UnAnchor.TextWrapped = true
 
-Invisible.Name = "Invisible"
-Invisible.Parent = Player
-Invisible.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
-Invisible.Position = UDim2.new(0.853328943, 0, 0.0135859121, 0)
-Invisible.Size = UDim2.new(0, 86, 0, 77)
-Invisible.Font = Enum.Font.Arial
-Invisible.Text = "Invisible"
-Invisible.TextColor3 = Color3.fromRGB(0, 0, 0)
-Invisible.TextScaled = true
-Invisible.TextSize = 14.000
-Invisible.TextWrapped = true
+nvisible.Name = "İnvisible"
+nvisible.Parent = Player
+nvisible.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+nvisible.Position = UDim2.new(0.853328943, 0, 0.0135859121, 0)
+nvisible.Size = UDim2.new(0, 86, 0, 77)
+nvisible.Font = Enum.Font.Arial
+nvisible.Text = "İnvisible"
+nvisible.TextColor3 = Color3.fromRGB(0, 0, 0)
+nvisible.TextScaled = true
+nvisible.TextSize = 14.000
+nvisible.TextWrapped = true
 
 infjp.Name = "infjp"
 infjp.Parent = Player
@@ -214,6 +235,17 @@ Btools.TextScaled = true
 Btools.TextSize = 14.000
 Btools.TextWrapped = true
 
+TextLabel_2.Parent = Btools
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0, 0, 0.883116901, 0)
+TextLabel_2.Size = UDim2.new(0, 86, 0, 8)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "(only you)"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
 Night.Name = "Night"
 Night.Parent = Player
 Night.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
@@ -226,39 +258,28 @@ Night.TextScaled = true
 Night.TextSize = 14.000
 Night.TextWrapped = true
 
-TextLabel_2.Parent = Night
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.Position = UDim2.new(0, 0, 0.883116901, 0)
-TextLabel_2.Size = UDim2.new(0, 86, 0, 8)
-TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "(only you)"
-TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.TextSize = 14.000
-TextLabel_2.TextWrapped = true
-
-NoFog.Name = "NoFog"
-NoFog.Parent = Player
-NoFog.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
-NoFog.Position = UDim2.new(0.853329003, 0, 0.266955197, 0)
-NoFog.Size = UDim2.new(0, 86, 0, 77)
-NoFog.Font = Enum.Font.Arial
-NoFog.Text = "NoFog"
-NoFog.TextColor3 = Color3.fromRGB(0, 0, 0)
-NoFog.TextScaled = true
-NoFog.TextSize = 14.000
-NoFog.TextWrapped = true
-
-TextLabel_3.Parent = NoFog
+TextLabel_3.Parent = Night
 TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.Position = UDim2.new(-8.94069672e-08, 0, 0.896103919, 0)
+TextLabel_3.Position = UDim2.new(0, 0, 0.883116901, 0)
 TextLabel_3.Size = UDim2.new(0, 86, 0, 8)
 TextLabel_3.Font = Enum.Font.SourceSans
 TextLabel_3.Text = "(only you)"
 TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_3.TextSize = 14.000
 TextLabel_3.TextWrapped = true
+
+TpPlayer.Name = "TpPlayer"
+TpPlayer.Parent = Player
+TpPlayer.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+TpPlayer.Position = UDim2.new(0.0262103342, 0, 0.504152, 0)
+TpPlayer.Size = UDim2.new(0, 86, 0, 77)
+TpPlayer.Font = Enum.Font.Arial
+TpPlayer.Text = "TpPLayer"
+TpPlayer.TextColor3 = Color3.fromRGB(0, 0, 0)
+TpPlayer.TextScaled = true
+TpPlayer.TextSize = 14.000
+TpPlayer.TextWrapped = true
 
 morning.Name = "morning"
 morning.Parent = Player
@@ -283,6 +304,29 @@ TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_4.TextSize = 14.000
 TextLabel_4.TextWrapped = true
 
+NoFog.Name = "NoFog"
+NoFog.Parent = Player
+NoFog.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+NoFog.Position = UDim2.new(0.853329003, 0, 0.266955197, 0)
+NoFog.Size = UDim2.new(0, 86, 0, 77)
+NoFog.Font = Enum.Font.Arial
+NoFog.Text = "NoFog"
+NoFog.TextColor3 = Color3.fromRGB(0, 0, 0)
+NoFog.TextScaled = true
+NoFog.TextSize = 14.000
+NoFog.TextWrapped = true
+
+TextLabel_5.Parent = NoFog
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.Position = UDim2.new(-8.94069672e-08, 0, 0.896103919, 0)
+TextLabel_5.Size = UDim2.new(0, 86, 0, 8)
+TextLabel_5.Font = Enum.Font.SourceSans
+TextLabel_5.Text = "(only you)"
+TextLabel_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.TextSize = 14.000
+TextLabel_5.TextWrapped = true
+
 SpeedFrame.Name = "SpeedFrame"
 SpeedFrame.Parent = Gui
 SpeedFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -297,7 +341,8 @@ Amount.Position = UDim2.new(0.330508471, 0, 0.146276593, 0)
 Amount.Size = UDim2.new(0, 208, 0, 60)
 Amount.Font = Enum.Font.Fantasy
 Amount.PlaceholderColor3 = Color3.fromRGB(170, 85, 255)
-Amount.Text = "Text here..."
+Amount.PlaceholderText = "Text here..."
+Amount.Text = ""
 Amount.TextColor3 = Color3.fromRGB(0, 0, 0)
 Amount.TextScaled = true
 Amount.TextSize = 14.000
@@ -355,29 +400,29 @@ Main.Position = UDim2.new(0, 134, 0, 50)
 Main.Size = UDim2.new(0, 590, 0, 371)
 Main.Visible = false
 
-TextLabel_5.Parent = Main
-TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_5.BackgroundTransparency = 1.000
-TextLabel_5.Position = UDim2.new(0, 53, 0, 23)
-TextLabel_5.Size = UDim2.new(0, 314, 0, 77)
-TextLabel_5.Font = Enum.Font.Bangers
-TextLabel_5.Text = "-MADE BY KERTENKELE_664"
-TextLabel_5.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_5.TextScaled = true
-TextLabel_5.TextSize = 14.000
-TextLabel_5.TextWrapped = true
-
 TextLabel_6.Parent = Main
 TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_6.BackgroundTransparency = 1.000
-TextLabel_6.Position = UDim2.new(0, 53, 0, 120)
-TextLabel_6.Size = UDim2.new(0, 304, 0, 125)
+TextLabel_6.Position = UDim2.new(0, 53, 0, 23)
+TextLabel_6.Size = UDim2.new(0, 314, 0, 77)
 TextLabel_6.Font = Enum.Font.Bangers
-TextLabel_6.Text = "Thanks For Using Hsyn GUI"
+TextLabel_6.Text = "-MADE BY KERTENKELE_664"
 TextLabel_6.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_6.TextScaled = true
 TextLabel_6.TextSize = 14.000
 TextLabel_6.TextWrapped = true
+
+TextLabel_7.Parent = Main
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.Position = UDim2.new(0, 53, 0, 120)
+TextLabel_7.Size = UDim2.new(0, 304, 0, 125)
+TextLabel_7.Font = Enum.Font.Bangers
+TextLabel_7.Text = "Thanks For Using Hsyn GUI"
+TextLabel_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_7.TextScaled = true
+TextLabel_7.TextSize = 14.000
+TextLabel_7.TextWrapped = true
 
 JumpFrame.Name = "JumpFrame"
 JumpFrame.Parent = Gui
@@ -392,7 +437,8 @@ Amount_2.BackgroundColor3 = Color3.fromRGB(125, 125, 125)
 Amount_2.Position = UDim2.new(0, 166, 0, 50)
 Amount_2.Size = UDim2.new(0, 254, 0, 70)
 Amount_2.Font = Enum.Font.Fondamento
-Amount_2.Text = "Text Here..."
+Amount_2.PlaceholderText = "Text Here..."
+Amount_2.Text = ""
 Amount_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 Amount_2.TextScaled = true
 Amount_2.TextSize = 14.000
@@ -430,6 +476,92 @@ UICorner_7.Parent = ResetPower
 
 UICorner_8.Parent = Gui
 
+Visuals.Name = "Visuals"
+Visuals.Parent = Gui
+Visuals.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Visuals.Position = UDim2.new(0, 0, 0.356294543, 0)
+Visuals.Size = UDim2.new(0, 134, 0, 50)
+Visuals.Font = Enum.Font.FredokaOne
+Visuals.Text = "Visuals"
+Visuals.TextColor3 = Color3.fromRGB(0, 0, 0)
+Visuals.TextScaled = true
+Visuals.TextSize = 14.000
+Visuals.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Visuals.TextStrokeTransparency = 0.000
+Visuals.TextWrapped = true
+
+Visual.Name = "Visual"
+Visual.Parent = Gui
+Visual.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Visual.BackgroundTransparency = 0.300
+Visual.Position = UDim2.new(0.185082868, 0, 0.118764848, 0)
+Visual.Size = UDim2.new(0, 589, 0, 371)
+Visual.Visible = false
+
+Esp.Name = "Esp"
+Esp.Parent = Visual
+Esp.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+Esp.Position = UDim2.new(0.0241701156, 0, 0.0189767517, 0)
+Esp.Size = UDim2.new(0, 86, 0, 77)
+Esp.Font = Enum.Font.Arial
+Esp.Text = "Esp"
+Esp.TextColor3 = Color3.fromRGB(0, 0, 0)
+Esp.TextScaled = true
+Esp.TextSize = 14.000
+Esp.TextWrapped = true
+
+TpFrame.Name = "TpFrame"
+TpFrame.Parent = Gui
+TpFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TpFrame.BackgroundTransparency = 0.300
+TpFrame.Position = UDim2.new(0.185082868, 0, 0.118764848, 0)
+TpFrame.Size = UDim2.new(0, 589, 0, 371)
+TpFrame.Visible = false
+
+Teleport.Name = "Teleport"
+Teleport.Parent = TpFrame
+Teleport.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+Teleport.Position = UDim2.new(0.047538206, 0, 0.485175192, 0)
+Teleport.Size = UDim2.new(0, 200, 0, 84)
+Teleport.Font = Enum.Font.Fondamento
+Teleport.Text = "Teleport"
+Teleport.TextColor3 = Color3.fromRGB(0, 0, 0)
+Teleport.TextScaled = true
+Teleport.TextSize = 14.000
+Teleport.TextWrapped = true
+
+UICorner_9.Parent = Teleport
+
+Close_2.Name = "Close"
+Close_2.Parent = TpFrame
+Close_2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Close_2.Position = UDim2.new(0.580645204, 0, 0.485175192, 0)
+Close_2.Size = UDim2.new(0, 200, 0, 84)
+Close_2.Font = Enum.Font.Fondamento
+Close_2.Text = "Close"
+Close_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close_2.TextScaled = true
+Close_2.TextSize = 14.000
+Close_2.TextWrapped = true
+
+UICorner_10.Parent = Close_2
+
+Amount_3.Name = "Amount"
+Amount_3.Parent = TpFrame
+Amount_3.BackgroundColor3 = Color3.fromRGB(145, 145, 145)
+Amount_3.Position = UDim2.new(0.263157904, 0, 0.0916442052, 0)
+Amount_3.Size = UDim2.new(0, 262, 0, 94)
+Amount_3.Font = Enum.Font.Fondamento
+Amount_3.PlaceholderColor3 = Color3.fromRGB(178, 178, 178)
+Amount_3.PlaceholderText = "Player Name..."
+Amount_3.Text = ""
+Amount_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Amount_3.TextScaled = true
+Amount_3.TextSize = 14.000
+Amount_3.TextWrapped = true
+
+UICorner_11.Parent = Amount_3
+
 OpenFrame.Name = "OpenFrame"
 OpenFrame.Parent = HsynGUI
 OpenFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -449,17 +581,20 @@ Open.TextScaled = true
 Open.TextSize = 14.000
 Open.TextWrapped = true
 
+UIStroke_3.Parent = OpenFrame
+UIStroke_3.Thickness = 6.100
+
 -- Scripts:
 
-local function CVOYV_fake_script() -- Close.LocalScript 
+local function OBQOARH_script() -- Close.LocalScript 
 	local script = Instance.new('LocalScript', Close)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Parent.Gui.Visible = false
 	end)
 end
-coroutine.wrap(CVOYV_fake_script)()
-local function HQEXE_fake_script() -- SelectPlayer.LocalScript 
+coroutine.wrap(OBQOARH_script)()
+local function ZKBRWZ_script() -- SelectPlayer.LocalScript 
 	local script = Instance.new('LocalScript', SelectPlayer)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -468,10 +603,11 @@ local function HQEXE_fake_script() -- SelectPlayer.LocalScript
 		script.Parent.Parent.Main.Visible = false
 		script.Parent.Parent.JumpFrame.Visible = false
 		script.Parent.Parent.Visual.Visible = false
+		script.Parent.Parent.TpFrame.Visible = false
 	end)
 end
-coroutine.wrap(HQEXE_fake_script)()
-local function AAOE_fake_script() -- SpeedHack.LocalScript 
+coroutine.wrap(ZKBRWZ_script)()
+local function WJQZRB_script() -- SpeedHack.LocalScript 
 	local script = Instance.new('LocalScript', SpeedHack)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -481,8 +617,8 @@ local function AAOE_fake_script() -- SpeedHack.LocalScript
 		script.Parent.Parent.Parent.TeleportFrame.Visible = false
 	end)
 end
-coroutine.wrap(AAOE_fake_script)()
-local function HPSEEPX_fake_script() -- JumpPower.LocalScript 
+coroutine.wrap(WJQZRB_script)()
+local function VLPKZY_script() -- JumpPower.LocalScript 
 	local script = Instance.new('LocalScript', JumpPower)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -493,8 +629,8 @@ local function HPSEEPX_fake_script() -- JumpPower.LocalScript
 		script.Parent.Parent.Parent.TeleportFrame.Visible = false
 	end)
 end
-coroutine.wrap(HPSEEPX_fake_script)()
-local function JILTNF_fake_script() -- Anchor.LocalScript 
+coroutine.wrap(VLPKZY_script)()
+local function OFNDRLR_script() -- Anchor.LocalScript 
 	local script = Instance.new('LocalScript', Anchor)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -505,8 +641,8 @@ local function JILTNF_fake_script() -- Anchor.LocalScript
 		character.HumanoidRootPart.Anchored = true
 	end)
 end
-coroutine.wrap(JILTNF_fake_script)()
-local function JWLMDN_fake_script() -- UnAnchor.LocalScript 
+coroutine.wrap(OFNDRLR_script)()
+local function LKORKGY_script() -- UnAnchor.LocalScript 
 	local script = Instance.new('LocalScript', UnAnchor)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -517,9 +653,9 @@ local function JWLMDN_fake_script() -- UnAnchor.LocalScript
 		character.HumanoidRootPart.Anchored = false
 	end)
 end
-coroutine.wrap(JWLMDN_fake_script)()
-local function WVQJN_fake_script() -- Invisible.LocalScript 
-	local script = Instance.new('LocalScript', Invisible)
+coroutine.wrap(LKORKGY_script)()
+local function ZLKP_script() -- nvisible.LocalScript 
+	local script = Instance.new('LocalScript', nvisible)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		local player = game.Players.LocalPlayer
@@ -542,8 +678,8 @@ local function WVQJN_fake_script() -- Invisible.LocalScript
 		
 	end)
 end
-coroutine.wrap(WVQJN_fake_script)()
-local function QCMG_fake_script() -- infjp.LocalScript 
+coroutine.wrap(ZLKP_script)()
+local function FHYHSS_script() -- infjp.LocalScript 
 	local script = Instance.new('LocalScript', infjp)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -575,13 +711,12 @@ local function QCMG_fake_script() -- infjp.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(QCMG_fake_script)()
-local function ADCS_fake_script() -- Btools.LocalScript 
+coroutine.wrap(FHYHSS_script)()
+local function VIACT_script() -- Btools.LocalScript 
 	local script = Instance.new('LocalScript', Btools)
 
-	btools = script.Parent
 	
-	btools.MouseButton1Click:Connect(function()
+	Btools.MouseButton1Click:Connect(function()
 		game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
 		for index, child in pairs(game:GetService("Workspace"):GetChildren()) do
 			if child.ClassName == "Part" then
@@ -643,8 +778,8 @@ local function ADCS_fake_script() -- Btools.LocalScript
 		c.BinType = Enum.BinType.Grab
 	end)
 end
-coroutine.wrap(ADCS_fake_script)()
-local function MDYCKHP_fake_script() -- Night.LocalScript 
+coroutine.wrap(VIACT_script)()
+local function AVRZAPP_script() -- Night.LocalScript 
 	local script = Instance.new('LocalScript', Night)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -652,8 +787,30 @@ local function MDYCKHP_fake_script() -- Night.LocalScript
 		
 	end)
 end
-coroutine.wrap(MDYCKHP_fake_script)()
-local function JKQBCK_fake_script() -- NoFog.LocalScript 
+coroutine.wrap(AVRZAPP_script)()
+local function XSUPRF_script() -- TpPlayer.LocalScript 
+	local script = Instance.new('LocalScript', TpPlayer)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.TpFrame.Visible = true
+		script.Parent.Parent.Parent.Player.Visible = false
+		script.Parent.Parent.Parent.Main.Visible = false
+		script.Parent.Parent.Parent.Visual.Visible = false
+		script.Parent.Parent.Parent.SpeedFrame.Visible = false
+		script.Parent.Parent.Parent.JumpFrame.Visible = false
+	end)
+end
+coroutine.wrap(XSUPRF_script)()
+local function UCPQKOP_script() -- morning.LocalScript 
+	local script = Instance.new('LocalScript', morning)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Lighting.TimeOfDay = "14:00:00"
+		
+	end)
+end
+coroutine.wrap(UCPQKOP_script)()
+local function DKLNZP_script() -- NoFog.LocalScript 
 	local script = Instance.new('LocalScript', NoFog)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -664,17 +821,8 @@ local function JKQBCK_fake_script() -- NoFog.LocalScript
 		game.Lighting.FogEnd = 1000000000000000
 	end)
 end
-coroutine.wrap(JKQBCK_fake_script)()
-local function WMEUF_fake_script() -- morning.LocalScript 
-	local script = Instance.new('LocalScript', morning)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		game.Lighting.TimeOfDay = "14:00:00"
-		
-	end)
-end
-coroutine.wrap(WMEUF_fake_script)()
-local function RVFQN_fake_script() -- Set.LocalScript 
+coroutine.wrap(DKLNZP_script)()
+local function VKCLDTO_script() -- Set.LocalScript 
 	local script = Instance.new('LocalScript', Set)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -684,8 +832,8 @@ local function RVFQN_fake_script() -- Set.LocalScript
 		humanoid.WalkSpeed = (script.Parent.Parent.Amount.Text)
 	end)
 end
-coroutine.wrap(RVFQN_fake_script)()
-local function JOQE_fake_script() -- Reset.LocalScript 
+coroutine.wrap(VKCLDTO_script)()
+local function DGDLUD_script() -- Reset.LocalScript 
 	local script = Instance.new('LocalScript', Reset)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -696,8 +844,8 @@ local function JOQE_fake_script() -- Reset.LocalScript
 		
 	end)
 end
-coroutine.wrap(JOQE_fake_script)()
-local function ZFAY_fake_script() -- SelectMain.LocalScript 
+coroutine.wrap(DGDLUD_script)()
+local function WZPQJ_script() -- SelectMain.LocalScript 
 	local script = Instance.new('LocalScript', SelectMain)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -706,10 +854,11 @@ local function ZFAY_fake_script() -- SelectMain.LocalScript
 		script.Parent.Parent.SpeedFrame.Visible = false
 		script.Parent.Parent.TeleportFrame.Visible = false
 		script.Parent.Parent.Visual.Visible = false
+		script.Parent.Parent.TpFrame.Visible = false
 	end)
 end
-coroutine.wrap(ZFAY_fake_script)()
-local function AWHO_fake_script() -- JumpPower_2.LocalScript 
+coroutine.wrap(WZPQJ_script)()
+local function AEXDEJT_script() -- JumpPower_2.LocalScript 
 	local script = Instance.new('LocalScript', JumpPower_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -720,8 +869,8 @@ local function AWHO_fake_script() -- JumpPower_2.LocalScript
 		
 	end)
 end
-coroutine.wrap(AWHO_fake_script)()
-local function IYDT_fake_script() -- ResetPower.LocalScript 
+coroutine.wrap(AEXDEJT_script)()
+local function TVXGJ_script() -- ResetPower.LocalScript 
 	local script = Instance.new('LocalScript', ResetPower)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -732,12 +881,95 @@ local function IYDT_fake_script() -- ResetPower.LocalScript
 		
 	end)
 end
-coroutine.wrap(IYDT_fake_script)()
-local function AIEFEY_fake_script() -- Open.LocalScript 
+coroutine.wrap(TVXGJ_script)()
+local function XEZEC_script() -- Visuals.LocalScript 
+	local script = Instance.new('LocalScript', Visuals)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visual.Visible = true
+		script.Parent.Parent.SpeedFrame.Visible = false
+		script.Parent.Parent.Main.Visible = false
+		script.Parent.Parent.JumpFrame.Visible = false
+		script.Parent.Parent.TpFrame.Visible = false
+		script.Parent.Parent.Player.Visible = false
+	end)
+end
+coroutine.wrap(XEZEC_script)()
+local function MDIJH_script() -- Esp.LocalScript 
+	local script = Instance.new('LocalScript', Esp)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local Players = game:GetService("Players"):GetChildren()
+		local RunService = game:GetService("RunService")
+		local Highlight = Instance.new("Highlight")
+		Highlight.Name = "HighLight"
+	
+		for i, v in pairs(Players) do
+			repeat wait() until v.Character
+			if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("HighLight") then
+				local HighLightClone = Highlight:Clone()
+				HighLightClone.Adornee = v.Character
+				HighLightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart")
+				HighLightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+				HighLightClone.Name = "HighLight"
+			end
+	
+	
+			game.Players.PlayerAdded:Connect(function(player)
+				repeat wait() until player.Character
+				if not player.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("HighLight") then
+					local HighLightClone = Highlight:Clone()
+					HighLightClone.Adornee = player.Character
+					HighLightClone.Parent = player.Character.FindFirstChild("HumanoidRootPart")
+					HighLightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+				end
+			end)
+	
+			game.Players.PlayerRemoving:Connect(function(playerRemoved)
+				playerRemoved.Character:FindFirstChild("HumanoidRootPart").HighLight:Destroy()
+			end)
+	
+	
+			RunService.HeartBeat:Connect(function()
+				for i, v in pairs(Players) do
+					repeat wait() until v.Character
+					if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("HighLight") then
+						local HighLightClone = Highlight:Clone()
+						HighLightClone.Adornee = v.Character
+						HighLightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart")
+						HighLightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+						HighLightClone.Name "HighLight"
+						task.wait()
+					end
+				end
+			end)
+		end
+	end)
+end
+coroutine.wrap(MDIJH_script)()
+local function WBDKXV_script() -- Teleport.LocalScript 
+	local script = Instance.new('LocalScript', Teleport)
+
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local Victim = TpFrame.Amount.Text
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Victim].Character.HumanoidRootPart.CFrame
+	end)
+end
+coroutine.wrap(WBDKXV_script)()
+local function LUFS_script() -- Close_2.LocalScript 
+	local script = Instance.new('LocalScript', Close_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.TpFrame.Visible = true
+	end)
+end
+coroutine.wrap(LUFS_script)()
+local function OHMIU_script() -- Open.LocalScript 
 	local script = Instance.new('LocalScript', Open)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Gui.Visible = true
 	end)
 end
-coroutine.wrap(AIEFEY_fake_script)()
+coroutine.wrap(OHMIU_script)()
