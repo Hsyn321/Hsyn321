@@ -692,15 +692,15 @@ UIStroke_9.Thickness = 6.100
 
 -- Scripts:
 
-local function HRIIX_script() -- Close.LocalScript 
+local function TKVTI_script() -- Close.LocalScript 
 	local script = Instance.new('LocalScript', Close)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Parent.Parent.HsynGUI.Gui.Visible = false
 	end)
 end
-coroutine.wrap(HRIIX_script)()
-local function HBJSJ_script() -- SelectPlayer.LocalScript 
+coroutine.wrap(TKVTI_script)()
+local function LACFS_script() -- SelectPlayer.LocalScript 
 	local script = Instance.new('LocalScript', SelectPlayer)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -712,16 +712,16 @@ local function HBJSJ_script() -- SelectPlayer.LocalScript
 		script.Parent.Parent.TpFrame.Visible = false
 	end)
 end
-coroutine.wrap(HBJSJ_script)()
-local function QGEYQVL_script() -- SpeedHack.LocalScript 
+coroutine.wrap(LACFS_script)()
+local function UOMTCAK_script() -- SpeedHack.LocalScript 
 	local script = Instance.new('LocalScript', SpeedHack)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.SpeedFrame.Visible = true
 	end)
 end
-coroutine.wrap(QGEYQVL_script)()
-local function OEFNKSM_script() -- JumpPower.LocalScript 
+coroutine.wrap(UOMTCAK_script)()
+local function DZXHPC_script() -- JumpPower.LocalScript 
 	local script = Instance.new('LocalScript', JumpPower)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -732,8 +732,8 @@ local function OEFNKSM_script() -- JumpPower.LocalScript
 		script.Parent.Parent.Parent.TeleportFrame.Visible = false
 	end)
 end
-coroutine.wrap(OEFNKSM_script)()
-local function RCARZ_script() -- Anchor.LocalScript 
+coroutine.wrap(DZXHPC_script)()
+local function EGGDJEG_script() -- Anchor.LocalScript 
 	local script = Instance.new('LocalScript', Anchor)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -744,8 +744,8 @@ local function RCARZ_script() -- Anchor.LocalScript
 		character.HumanoidRootPart.Anchored = true
 	end)
 end
-coroutine.wrap(RCARZ_script)()
-local function GIIMBD_script() -- UnAnchor.LocalScript 
+coroutine.wrap(EGGDJEG_script)()
+local function HRFI_script() -- UnAnchor.LocalScript 
 	local script = Instance.new('LocalScript', UnAnchor)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -756,8 +756,8 @@ local function GIIMBD_script() -- UnAnchor.LocalScript
 		character.HumanoidRootPart.Anchored = false
 	end)
 end
-coroutine.wrap(GIIMBD_script)()
-local function GNSKZF_script() -- nvisible.LocalScript 
+coroutine.wrap(HRFI_script)()
+local function IYOWWG_script() -- nvisible.LocalScript 
 	local script = Instance.new('LocalScript', nvisible)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -781,8 +781,8 @@ local function GNSKZF_script() -- nvisible.LocalScript
 		
 	end)
 end
-coroutine.wrap(GNSKZF_script)()
-local function TXHZSN_script() -- infjp.LocalScript 
+coroutine.wrap(IYOWWG_script)()
+local function DUOWVE_script() -- infjp.LocalScript 
 	local script = Instance.new('LocalScript', infjp)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -814,8 +814,8 @@ local function TXHZSN_script() -- infjp.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(TXHZSN_script)()
-local function GPEETA_script() -- Btools.LocalScript 
+coroutine.wrap(DUOWVE_script)()
+local function RILPVQX_script() -- Btools.LocalScript 
 	local script = Instance.new('LocalScript', Btools)
 
 	
@@ -882,8 +882,8 @@ local function GPEETA_script() -- Btools.LocalScript
 		c.BinType = Enum.BinType.Grab
 	end)
 end
-coroutine.wrap(GPEETA_script)()
-local function XHKPMRY_script() -- Night.LocalScript 
+coroutine.wrap(RILPVQX_script)()
+local function VEFHI_script() -- Night.LocalScript 
 	local script = Instance.new('LocalScript', Night)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -891,8 +891,8 @@ local function XHKPMRY_script() -- Night.LocalScript
 		
 	end)
 end
-coroutine.wrap(XHKPMRY_script)()
-local function EZTLIDY_script() -- TpPlayer.LocalScript 
+coroutine.wrap(VEFHI_script)()
+local function GZFTJ_script() -- TpPlayer.LocalScript 
 	local script = Instance.new('LocalScript', TpPlayer)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -904,8 +904,8 @@ local function EZTLIDY_script() -- TpPlayer.LocalScript
 		script.Parent.Parent.Parent.JumpFrame.Visible = false
 	end)
 end
-coroutine.wrap(EZTLIDY_script)()
-local function WKXJ_script() -- morning.LocalScript 
+coroutine.wrap(GZFTJ_script)()
+local function EIOY_script() -- morning.LocalScript 
 	local script = Instance.new('LocalScript', morning)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -913,8 +913,8 @@ local function WKXJ_script() -- morning.LocalScript
 		
 	end)
 end
-coroutine.wrap(WKXJ_script)()
-local function RYRUAO_script() -- NoFog.LocalScript 
+coroutine.wrap(EIOY_script)()
+local function DWNARPU_script() -- NoFog.LocalScript 
 	local script = Instance.new('LocalScript', NoFog)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -925,8 +925,8 @@ local function RYRUAO_script() -- NoFog.LocalScript
 		game.Lighting.FogEnd = 1000000000000000
 	end)
 end
-coroutine.wrap(RYRUAO_script)()
-local function IGNOGM_script() -- Gravity.LocalScript 
+coroutine.wrap(DWNARPU_script)()
+local function MMEJGTH_script() -- Gravity.LocalScript 
 	local script = Instance.new('LocalScript', Gravity)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -939,8 +939,8 @@ local function IGNOGM_script() -- Gravity.LocalScript
 	end)
 	
 end
-coroutine.wrap(IGNOGM_script)()
-local function WBEAB_script() -- Light.LocalScript 
+coroutine.wrap(MMEJGTH_script)()
+local function ZRFMHKD_script() -- Light.LocalScript 
 	local script = Instance.new('LocalScript', Light)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -956,8 +956,8 @@ local function WBEAB_script() -- Light.LocalScript
 		
 	end)
 end
-coroutine.wrap(WBEAB_script)()
-local function QFCC_script() -- AntiAFK.LocalScript 
+coroutine.wrap(ZRFMHKD_script)()
+local function FAMNZM_script() -- AntiAFK.LocalScript 
 	local script = Instance.new('LocalScript', AntiAFK)
 
 	
@@ -970,8 +970,8 @@ local function QFCC_script() -- AntiAFK.LocalScript
 	end)
 	
 end
-coroutine.wrap(QFCC_script)()
-local function SSIGGP_script() -- ResetCharacter.LocalScript 
+coroutine.wrap(FAMNZM_script)()
+local function YXSZAEV_script() -- ResetCharacter.LocalScript 
 	local script = Instance.new('LocalScript', ResetCharacter)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -984,8 +984,8 @@ local function SSIGGP_script() -- ResetCharacter.LocalScript
 		
 	end)
 end
-coroutine.wrap(SSIGGP_script)()
-local function AZGO_script() -- Set.LocalScript 
+coroutine.wrap(YXSZAEV_script)()
+local function RCZHK_script() -- Set.LocalScript 
 	local script = Instance.new('LocalScript', Set)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -995,8 +995,8 @@ local function AZGO_script() -- Set.LocalScript
 		humanoid.WalkSpeed = (script.Parent.Parent.Amount.Text)
 	end)
 end
-coroutine.wrap(AZGO_script)()
-local function WVOOQ_script() -- Reset.LocalScript 
+coroutine.wrap(RCZHK_script)()
+local function AKFMBI_script() -- Reset.LocalScript 
 	local script = Instance.new('LocalScript', Reset)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1007,8 +1007,8 @@ local function WVOOQ_script() -- Reset.LocalScript
 		
 	end)
 end
-coroutine.wrap(WVOOQ_script)()
-local function RLEZ_script() -- SelectMain.LocalScript 
+coroutine.wrap(AKFMBI_script)()
+local function NUPH_script() -- SelectMain.LocalScript 
 	local script = Instance.new('LocalScript', SelectMain)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1020,8 +1020,8 @@ local function RLEZ_script() -- SelectMain.LocalScript
 		script.Parent.Parent.GravityFrame.Visible = false
 	end)
 end
-coroutine.wrap(RLEZ_script)()
-local function WMCOS_script() -- JumpPower_2.LocalScript 
+coroutine.wrap(NUPH_script)()
+local function PGQUESC_script() -- JumpPower_2.LocalScript 
 	local script = Instance.new('LocalScript', JumpPower_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1032,8 +1032,8 @@ local function WMCOS_script() -- JumpPower_2.LocalScript
 		
 	end)
 end
-coroutine.wrap(WMCOS_script)()
-local function VDMCIV_script() -- ResetPower.LocalScript 
+coroutine.wrap(PGQUESC_script)()
+local function BODYXHN_script() -- ResetPower.LocalScript 
 	local script = Instance.new('LocalScript', ResetPower)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1044,8 +1044,8 @@ local function VDMCIV_script() -- ResetPower.LocalScript
 		
 	end)
 end
-coroutine.wrap(VDMCIV_script)()
-local function AGMI_script() -- Teleport.LocalScript 
+coroutine.wrap(BODYXHN_script)()
+local function MGPWCVR_script() -- Teleport.LocalScript 
 	local script = Instance.new('LocalScript', Teleport)
 
 	Amount_3.MouseButton1Click:Connect(function()
@@ -1053,16 +1053,16 @@ local function AGMI_script() -- Teleport.LocalScript
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Victim].Character.HumanoidRootPart.CFrame
 	end)
 end
-coroutine.wrap(AGMI_script)()
-local function ZHGJN_script() -- Close_2.LocalScript 
+coroutine.wrap(MGPWCVR_script)()
+local function SOTX_script() -- Close_2.LocalScript 
 	local script = Instance.new('LocalScript', Close_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.TpFrame.Visible = false
 	end)
 end
-coroutine.wrap(ZHGJN_script)()
-local function BZKPB_script() -- SetGravity.LocalScript 
+coroutine.wrap(SOTX_script)()
+local function GSBXMB_script() -- SetGravity.LocalScript 
 	local script = Instance.new('LocalScript', SetGravity)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1074,8 +1074,8 @@ local function BZKPB_script() -- SetGravity.LocalScript
 	
 	end)
 end
-coroutine.wrap(BZKPB_script)()
-local function PSBSASF_script() -- Reset_2.LocalScript 
+coroutine.wrap(GSBXMB_script)()
+local function SEHG_script() -- Reset_2.LocalScript 
 	local script = Instance.new('LocalScript', Reset_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1086,12 +1086,12 @@ local function PSBSASF_script() -- Reset_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(PSBSASF_script)()
-local function PYKCTV_script() -- Open.LocalScript 
+coroutine.wrap(SEHG_script)()
+local function VYBB_script() -- Open.LocalScript 
 	local script = Instance.new('LocalScript', Open)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Gui.Visible = true
 	end)
 end
-coroutine.wrap(PYKCTV_script)()
+coroutine.wrap(VYBB_script)()
